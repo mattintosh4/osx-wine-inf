@@ -1,5 +1,29 @@
-﻿[version]
-signature="$Windows NT$"
+﻿;; Mac OS X Wine 用 INF
+;;
+;; Copyright (C) 2013 mattintosh4, http://github.com/mattintosh4
+;;
+;; 概要:
+;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
+;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
+;;
+;; 登録方法:
+;;   /path/to/wine rundll32 setupapi.dll,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
+;;
+;; 登録前の注意事項:
+;;   このファイルには BOM 情報が付加されている必要があります。
+;;   バイナリエディタ等で先頭に `efbbbf' が付加されていることを確認してから登録を行なってください。
+;;
+;;   例) xxd osx-wine.inf | head -1
+;;
+;;   もしも BOM 情報が付加されていない場合は `uconv' 等で追加してください。
+;;   `uconv' は同一ファイルに上書きできません。入力ファイル名を変更するか別名で出力してください。
+;;   `uconv' は MacPorts の `icu' ポートからインストールできます。
+;;
+;;   例) uconv -f UTF-8 -t UTF-8 --add-signature -o osx-wine.inf osx-wine.inf.bak
+;;
+
+[version]
+signature="$CHICAGO$"
 
 [DefaultInstall]
 AddReg=\
@@ -11,11 +35,10 @@ AddReg=\
   Wine Settings
 
 
+
 [Strings]
 
-;;;;;;;
-; KEY ;
-;;;;;;;
+;; KEY ;;
 
 Control           = System\CurrentControlSet\Control
 CurrentVersion    = Software\Microsoft\Windows\CurrentVersion
@@ -26,9 +49,7 @@ FontMapper        = Software\Microsoft\Windows NT\CurrentVersion\FontMapper
 FontReplacements  = Software\Wine\Fonts\Replacements
 FontSystemLink    = Software\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink
 
-;;;;;;;;
-; FONT ;
-;;;;;;;;
+;; FONT ;;
 
 GothicMonoFile  = ヒラギノ角ゴ Pro W3.otf
 GothicMonoName  = ヒラギノ角ゴ Pro W3
@@ -107,9 +128,7 @@ HKLM,%FontMapper%       ,"ＭＳ Ｐゴシック"      ,0x00010001,0x00000080
 
 [Time Zones]
 
-;;;;;;;
-; ADD ;
-;;;;;;;
+;; ADD ;;
 
 HKCU,%CurrentVersionNT%\Time Zones                      ,"TimeZoneKeyName"  ,          ,"Tokyo Standard Time"
 HKLM,%CurrentVersionNT%\Time Zones\Tokyo Standard Time  ,"Display"          ,          ,"(GMT+09:00) 大阪、札幌、東京"
@@ -127,9 +146,7 @@ HKLM,%Control%\TimeZoneInformation                      ,"StandardBias"     ,0x0
 HKLM,%Control%\TimeZoneInformation                      ,"StandardName"     ,          ,"東京 (標準時)"
 HKLM,%Control%\TimeZoneInformation                      ,"StandardStart"    ,0x00000001,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 
-;;;;;;;;;;
-; DELETE ;
-;;;;;;;;;;
+;; DELETE ;;
 
 HKLM,%Control%\TimeZoneInformation                      ,"TimeZoneKeyName"  ,0x00000004
 HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x00000004
