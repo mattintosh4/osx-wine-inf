@@ -1,6 +1,6 @@
 ﻿;; Mac OS X Wine 用 INF
 ;;
-;; Copyright (C) 2013 mattintosh4, http://github.com/mattintosh4
+;; Copyright (C) 2013 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
