@@ -5,6 +5,7 @@ signature="$Windows NT$"
 AddReg=\
   Strings,\
   Control Panel,\
+  Favorites,\
   Fonts,\
   Time Zones,\
   Wine Settings
@@ -46,6 +47,19 @@ MinchoPropName  = ヒラギノ明朝 Pro W3
 
 HKCU,Control Panel\Mouse,"DoubleClickHeight",,"8"
 HKCU,Control Panel\Mouse,"DoubleClickWidth" ,,"8"
+
+
+
+[Favorites]
+
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"マウス"                    ,,"HKEY_CURRENT_USER\Control Panel\Mouse"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"フォント (FontSubstitutes)",,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\FontSubstitutes"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"フォント (Replacements)"   ,,"HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"フォント (SystemLink)"     ,,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\FontLink\SystemLink"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"ドライバ"                  ,,"HKEY_CURRENT_USER\Software\Wine\Drivers"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"デスクトップ"              ,,"HKEY_CURRENT_USER\Control Panel\Desktop"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"ユーザー環境変数"          ,,"HKEY_CURRENT_USER\Environment"
+HKCU,%CurrentVersion%\Applets\Regedit\Favorites,"ライブラリのオーバーライド",,"HKEY_CURRENT_USER\Software\Wine\DllOverrides"
 
 
 
@@ -124,7 +138,8 @@ HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x0
 
 [Wine Settings]
 
-HKCU,Software\Wine\Direct3D   ,"*DirectDrawRenderer"        ,,"opengl"
-HKCU,Software\Wine\Drivers    ,"*Graphics"                  ,,"mac"
-HKCU,Software\Wine\Drivers    ,"*Audio"                     ,,"coreaudio"
-HKCU,Software\Wine\Mac Driver ,"*WindowsFloatWhenInactive"  ,,"nonfullscreen"
+HKCU,Software\Wine\Direct3D     ,"*DirectDrawRenderer"        ,,"opengl"
+HKCU,Software\Wine\DllOverrides
+HKCU,Software\Wine\Drivers      ,"*Graphics"                  ,,"mac"
+HKCU,Software\Wine\Drivers      ,"*Audio"                     ,,"coreaudio"
+HKCU,Software\Wine\Mac Driver   ,"*WindowsFloatWhenInactive"  ,,"nonfullscreen"
