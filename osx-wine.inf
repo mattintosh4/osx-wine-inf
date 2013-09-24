@@ -44,7 +44,7 @@ AddReg=\
 
 [Strings]
 
-;; KEY ;;
+;;; KEY ;;;
 
 Control           = System\CurrentControlSet\Control
 CurrentVersion    = Software\Microsoft\Windows\CurrentVersion
@@ -55,7 +55,7 @@ FontMapper        = Software\Microsoft\Windows NT\CurrentVersion\FontMapper
 FontReplacements  = Software\Wine\Fonts\Replacements
 FontSystemLink    = Software\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink
 
-;; FONT ;;
+;;; FONT ;;;
 
 GothicMonoFile  = ヒラギノ角ゴ Pro W3.otf
 GothicMonoName  = ヒラギノ角ゴ Pro W3
@@ -137,7 +137,7 @@ HKLM,%FontMapper%       ,"ＭＳ Ｐゴシック"      ,0x00010001,0x00000080
 
 [Time Zones]
 
-;; ADD ;;
+;;; ADD SECTION ;;;
 
 HKCU,%CurrentVersionNT%\Time Zones                      ,"TimeZoneKeyName"  ,          ,"Tokyo Standard Time"
 HKLM,%CurrentVersionNT%\Time Zones\Tokyo Standard Time  ,"Display"          ,          ,"(GMT+09:00) 大阪、札幌、東京"
@@ -155,7 +155,7 @@ HKLM,%Control%\TimeZoneInformation                      ,"StandardBias"     ,0x0
 HKLM,%Control%\TimeZoneInformation                      ,"StandardName"     ,          ,"東京 (標準時)"
 HKLM,%Control%\TimeZoneInformation                      ,"StandardStart"    ,0x00000001,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00
 
-;; DELETE ;;
+;;; DELETE SECTION ;;;
 
 HKLM,%Control%\TimeZoneInformation                      ,"TimeZoneKeyName"  ,0x00000004
 HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x00000004
