@@ -164,8 +164,8 @@ HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x0
 
 [Wine Settings]
 
-HKCU,Software\Wine\Direct3D     ,"*DirectDrawRenderer"        ,,"opengl"
+HKCU,Software\Wine\Direct3D     ,"DirectDrawRenderer"        ,,"opengl"
 HKCU,Software\Wine\DllOverrides,,16
-HKCU,Software\Wine\Drivers      ,"*Graphics"                  ,,"mac"
-HKCU,Software\Wine\Drivers      ,"*Audio"                     ,,"coreaudio"
-HKCU,Software\Wine\Mac Driver   ,"*WindowsFloatWhenInactive"  ,,"nonfullscreen"
+HKCU,Software\Wine\Drivers      ,"Graphics"                  ,,"mac"
+HKCU,Software\Wine\Drivers      ,"Audio"                     ,,"coreaudio"
+HKCU,Software\Wine\Mac Driver   ,"WindowsFloatWhenInactive"  ,,"nonfullscreen"
