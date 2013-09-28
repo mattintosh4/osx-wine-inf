@@ -33,7 +33,6 @@ signature="$CHICAGO$"
 
 [DefaultInstall]
 AddReg=\
-  Strings,\
   Control Panel,\
   Favorites,\
   Fonts,\
@@ -57,16 +56,16 @@ FontSystemLink    = Software\Microsoft\Windows NT\CurrentVersion\FontLink\System
 
 ;;; FONT ;;;
 
-GothicMonoFile  = ヒラギノ角ゴ Pro W3.otf
-GothicMonoName  = ヒラギノ角ゴ Pro W3
-GothicPropFile  = ヒラギノ角ゴ Pro W3.otf
-GothicPropName  = ヒラギノ角ゴ Pro W3
-GothicUIFile    = ヒラギノ角ゴ Pro W3.otf
-GothicUIName    = ヒラギノ角ゴ Pro W3
-MinchoMonoFile  = ヒラギノ明朝 Pro W3.otf
-MinchoMonoName  = ヒラギノ明朝 Pro W3
-MinchoPropFile  = ヒラギノ明朝 Pro W3.otf
-MinchoPropName  = ヒラギノ明朝 Pro W3
+GothicMonoFile    = ヒラギノ角ゴ Pro W3.otf
+GothicMonoName    = ヒラギノ角ゴ Pro W3
+GothicPropFile    = ヒラギノ角ゴ Pro W3.otf
+GothicPropName    = ヒラギノ角ゴ Pro W3
+GothicUIFile      = ヒラギノ角ゴ Pro W3.otf
+GothicUIName      = ヒラギノ角ゴ Pro W3
+MinchoMonoFile    = ヒラギノ明朝 Pro W3.otf
+MinchoMonoName    = ヒラギノ明朝 Pro W3
+MinchoPropFile    = ヒラギノ明朝 Pro W3.otf
+MinchoPropName    = ヒラギノ明朝 Pro W3
 
 
 
@@ -166,6 +165,6 @@ HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x0
 
 HKCU,Software\Wine\Direct3D     ,"DirectDrawRenderer"        ,,"opengl"
 HKCU,Software\Wine\DllOverrides,,16
-HKCU,Software\Wine\Drivers      ,"Graphics"                  ,,"mac"
 HKCU,Software\Wine\Drivers      ,"Audio"                     ,,"coreaudio"
+HKCU,Software\Wine\Drivers      ,"Graphics"                  ,,"mac"
 HKCU,Software\Wine\Mac Driver   ,"WindowsFloatWhenInactive"  ,,"nonfullscreen"
