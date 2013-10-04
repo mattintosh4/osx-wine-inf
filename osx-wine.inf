@@ -164,7 +164,22 @@ HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x0
 [Wine Settings]
 
 HKCU,Software\Wine\Direct3D     ,"DirectDrawRenderer"        ,,"opengl"
-HKCU,Software\Wine\DllOverrides,,16
+HKCU,Software\Wine\DllOverrides,,0x00000010
 HKCU,Software\Wine\Drivers      ,"Audio"                     ,,"coreaudio"
 HKCU,Software\Wine\Drivers      ,"Graphics"                  ,,"mac"
 HKCU,Software\Wine\Mac Driver   ,"WindowsFloatWhenInactive"  ,,"nonfullscreen"
+
+
+
+;; FLAGS
+;; -----
+;;   0x00000000 FLG_ADDREG_TYPE_SZ
+;;   0x00000001 FLG_ADDREG_BINVALUETYPE
+;;   0x00000002 FLG_ADDREG_NOCLOBBER
+;;   0x00000004 FLG_ADDREG_DELVAL
+;;   0x00000008 FLG_ADDREG_APPEND
+;;   0x00000010 FLG_ADDREG_KEYONLY
+;;   0x00000020 FLG_ADDREG_OVERWRITEONLY
+;;   0x00010000 FLG_ADDREG_TYPE_MULTI_SZ
+;;   0x00010001 FLG_ADDREG_TYPE_DWORD
+;;   0x00020000 FLG_ADDREG_TYPE_EXPAND_SZ
