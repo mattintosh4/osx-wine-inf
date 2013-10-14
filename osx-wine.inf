@@ -3,14 +3,14 @@
 ;; Copyright (C) 2013 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2013年10月04日
+;;   2013年10月15日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
 ;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
 ;;
 ;; 動作環境:
-;;    Mac OS X 10.6.8 / Wine 1.7.2
+;;    Mac OS X 10.6.8 / Wine 1.7.4
 ;;
 ;; 登録方法:
 ;;   /path/to/wine rundll32 setupapi.dll,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
@@ -169,6 +169,9 @@ HKCU,Software\Wine\Drivers      ,"Audio"                     ,,"coreaudio"
 HKCU,Software\Wine\Drivers      ,"Graphics"                  ,,"mac"
 HKCU,Software\Wine\Mac Driver   ,"WindowsFloatWhenInactive"  ,,"nonfullscreen"
 
+;;; STEAM ;;;
+
+HKCU,Software\Wine\AppDefaults\Steam.exe\DllOverrides,"dwrite",,""
 
 
 ;; FLAGS
