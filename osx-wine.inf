@@ -3,29 +3,32 @@
 ;; Copyright (C) 2013 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2013年10月15日
+;;   2014年01月14日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
 ;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
 ;;
 ;; 動作環境:
-;;    Mac OS X 10.6.8 / Wine 1.7.4
+;;    Mac OS X 10.6.8 / Wine 1.7.9
 ;;
 ;; 登録方法:
 ;;   /path/to/wine rundll32 setupapi.dll,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
 ;;
 ;; 登録前の注意事項:
 ;;   このファイルには BOM 情報が付加されている必要があります。
-;;   `hexdump' 等で先頭に `ef bb bf' が付加されていることを確認してから登録を行なってください。
+;;   od 等で先頭に `ef bb bf' が付加されていることを確認してから登録を行なってください。
 ;;
-;;   例) hexdump -C osx-wine.inf | head -1
+;;   e.g.) /usr/bin/od -N 3 -t x1 osx-wine.inf
 ;;
-;;   もしも BOM 情報が付加されていない場合は `uconv' 等で追加してください。
-;;   `uconv' は同一ファイルに上書きできません。入力ファイル名を変更するか別名で出力してください。
-;;   `uconv' は MacPorts の `icu' ポートからインストールできます。
+;;   もしも BOM 情報が付加されていない場合は sed や uconv 等で追加してください。
 ;;
-;;   例) uconv -f UTF-8 -t UTF-8 --add-signature -o osx-wine.inf osx-wine.inf.bak
+;;   e.g.) /usr/bin/sed -i '' $'1s/^/\xef\xbb\xbf/' osx-wine.inf
+;;
+;;   uconv は同一ファイルに上書きできません。入力ファイル名を変更するか別名で保存してください。
+;;   uconv は MacPorts の "icu" ポートからインストールできます。
+;;
+;;   e.g.) uconv -f UTF-8 -t UTF-8 --add-signature -o osx-wine.inf osx-wine.inf.bak
 ;;
 
 [version]
