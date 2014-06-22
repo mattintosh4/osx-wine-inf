@@ -1,4 +1,7 @@
 REGEDIT4
 
+; This file is written by CP932.
+; Do not change encoding!
+
 [HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
 "MS UI Gothic"="ƒqƒ‰ƒMƒmŠÛƒS Pro W4"
