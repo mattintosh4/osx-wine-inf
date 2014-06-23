@@ -1,0 +1,14 @@
+REGEDIT4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; This file is written by CP932. ;;
+;; Do not change encoding!        ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
+"MS UI Gothic"     ="IPAMonaUIGothic"
+"‚l‚r ‚oƒSƒVƒbƒN"  ="IPAMonaPGothic"
+"‚l‚r ‚o–¾’©"      ="IPAMonaPMincho"
+"‚l‚r ƒSƒVƒbƒN"    ="IPAMonaGothic"
+;; Fix RPG2000RTP
+"‚l‚r –¾’©"        ="IPAMonaGothic"
