@@ -6,9 +6,6 @@ REGEDIT4
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements]
-"MS UI Gothic"     ="IPAMonaUIGothic"
-"‚l‚r ‚oƒSƒVƒbƒN"  ="IPAMonaPGothic"
-"‚l‚r ‚o–¾’©"      ="IPAMonaPMincho"
-"‚l‚r ƒSƒVƒbƒN"    ="IPAMonaGothic"
+"‚l‚r ƒSƒVƒbƒN"="IPAMonaGothic"
 ;; Fix RPG2000RTP
-"‚l‚r –¾’©"        ="IPAMonaGothic"
+"‚l‚r –¾’©"="IPAMonaGothic"
