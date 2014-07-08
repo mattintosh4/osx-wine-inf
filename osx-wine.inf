@@ -3,17 +3,17 @@
 ;; Copyright (C) 2013-2014 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2014年05月22日
+;;   2014年07月08日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
 ;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
 ;;
 ;; 動作環境:
-;;    Mac OS X 10.6.8 / Wine 1.7.16
+;;    Mac OS X 10.9.4 / Wine 1.7.21
 ;;
 ;; 登録方法:
-;;   /path/to/wine rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
+;;   wine rundll32 setupapi,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
 ;;
 ;; 登録前の注意事項:
 ;;   このファイルには BOM 情報が付加されている必要があります。
@@ -67,8 +67,8 @@ GothicMonoFile    = ヒラギノ角ゴ Pro W3.otf
 GothicMonoName    = ヒラギノ角ゴ Pro W3
 GothicPropFile    = ヒラギノ角ゴ Pro W3.otf
 GothicPropName    = ヒラギノ角ゴ Pro W3
-GothicUIFile      = ヒラギノ角ゴ Pro W3.otf
-GothicUIName      = ヒラギノ角ゴ Pro W3
+GothicUIFile      = ヒラギノ丸ゴ Pro W4.otf
+GothicUIName      = ヒラギノ丸ゴ Pro W4
 MinchoMonoFile    = ヒラギノ明朝 Pro W3.otf
 MinchoMonoName    = ヒラギノ明朝 Pro W3
 MinchoPropFile    = ヒラギノ明朝 Pro W3.otf
