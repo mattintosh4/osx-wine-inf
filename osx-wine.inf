@@ -3,14 +3,14 @@
 ;; Copyright (C) 2013-2014 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2014年07月08日
+;;   2014年08月26日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
 ;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
 ;;
 ;; 動作環境:
-;;    Mac OS X 10.9.4 / Wine 1.7.21
+;;    Mac OS X 10.9.4 / Wine 1.7.23
 ;;
 ;; 登録方法:
 ;;   wine rundll32 setupapi,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
@@ -41,7 +41,8 @@ AddReg=\
   Fonts,\
   Time Zones,\
   Wine Settings,\
-  App Defaults
+  App Defaults,\
+  Experimental
 
 
 
@@ -49,12 +50,9 @@ AddReg=\
 
 ;;; KEY ;;;
 
-AppDefaults       = Software\Wine\AppDefaults
 Control           = System\CurrentControlSet\Control
 CurrentVersion    = Software\Microsoft\Windows\CurrentVersion
 CurrentVersionNT  = Software\Microsoft\Windows NT\CurrentVersion
-DllOverrides      = Software\Wine\DllOverrides
-Drivers           = Software\Wine\Drivers
 Favorites         = Software\Microsoft\Windows\CurrentVersion\Applets\Regedit\Favorites
 FontLink          = Software\Microsoft\Windows NT\CurrentVersion\FontLink
 FontMapper        = Software\Microsoft\Windows NT\CurrentVersion\FontMapper
@@ -85,43 +83,46 @@ HKCU,Control Panel\Mouse,"DoubleClickWidth" ,,"8"
 
 [Favorites]
 
-HKCU,%Favorites%,"Wine DLL オーバーライド"   ,,"HKEY_CURRENT_USER\%DllOverrides%"
-HKCU,%Favorites%,"Wine ドライバ"             ,,"HKEY_CURRENT_USER\%Drivers%"
-HKCU,%Favorites%,"システム環境変数"          ,,"HKEY_LOCAL_MACHINE\%Control%\Session Manager\Environment"
-HKCU,%Favorites%,"フォント (FontSubstitutes)",,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\FontSubstitutes"
-HKCU,%Favorites%,"フォント (Replacements)"   ,,"HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements"
-HKCU,%Favorites%,"フォント (SystemLink)"     ,,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\FontLink\SystemLink"
-HKCU,%Favorites%,"タイムゾーン (Tokyo)"      ,,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\Time Zones\Tokyo Standard Time"
-HKCU,%Favorites%,"デスクトップ"              ,,"HKEY_CURRENT_USER\Control Panel\Desktop"
-HKCU,%Favorites%,"マウス"                    ,,"HKEY_CURRENT_USER\Control Panel\Mouse"
-HKCU,%Favorites%,"ユーザー環境変数"          ,,"HKEY_CURRENT_USER\Environment"
+HKCU,%Favorites%,"デスクトップ"               ,,"HKEY_CURRENT_USER\Control Panel\Desktop"
+HKCU,%Favorites%,"マウス"                     ,,"HKEY_CURRENT_USER\Control Panel\Mouse"
+HKCU,%Favorites%,"環境変数 (ユーザ)"          ,,"HKEY_CURRENT_USER\Environment"
+HKCU,%Favorites%,"Wine EXE 固有設定"          ,,"HKEY_CURRENT_USER\Software\Wine\AppDefaults"
+HKCU,%Favorites%,"Wine Direct3D"              ,,"HKEY_CURRENT_USER\Software\Wine\Direct3D"
+HKCU,%Favorites%,"Wine DLL オーバライド"      ,,"HKEY_CURRENT_USER\Software\Wine\DllOverrides"
+HKCU,%Favorites%,"Wine ドライバ"              ,,"HKEY_CURRENT_USER\Software\Wine\Drivers"
+HKCU,%Favorites%,"フォント (Replacements)"    ,,"HKEY_CURRENT_USER\Software\Wine\Fonts\Replacements"
+HKCU,%Favorites%,"環境変数 (システム)"        ,,"HKEY_LOCAL_MACHINE\%Control%\Session Manager\Environment"
+HKCU,%Favorites%,"フォント (SystemLink)"      ,,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\FontLink\SystemLink"
+HKCU,%Favorites%,"フォント (FontSubstitutes)" ,,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\FontSubstitutes"
+HKCU,%Favorites%,"タイムゾーン (Tokyo)"       ,,"HKEY_LOCAL_MACHINE\%CurrentVersionNT%\Time Zones\Tokyo Standard Time"
 
 
 
 [Fonts]
 
-HKCU,%FontReplacements% ,"Lucida Sans Unicode"  ,          ,"Lucida Grande"
-HKCU,%FontReplacements% ,"MS Gothic"            ,          ,"%GothicMonoName%"
-HKCU,%FontReplacements% ,"MS Mincho"            ,          ,"%MinchoMonoName%"
-HKCU,%FontReplacements% ,"MS PGothic"           ,          ,"%GothicPropName%"
-HKCU,%FontReplacements% ,"MS PMincho"           ,          ,"%MinchoPropName%"
-HKCU,%FontReplacements% ,"MS UI Gothic"         ,          ,"%GothicUIName%"
-HKCU,%FontReplacements% ,"Meiryo UI"            ,          ,"%GothicUIName%"
-HKCU,%FontReplacements% ,"Meiryo"               ,          ,"%GothicPropName%"
-HKCU,%FontReplacements% ,"ＭＳ 明朝"            ,          ,"%MinchoMonoName%"
-HKCU,%FontReplacements% ,"ＭＳ Ｐ明朝"          ,          ,"%MinchoPropName%"
-HKCU,%FontReplacements% ,"ＭＳ ゴシック"        ,          ,"%GothicMonoName%"
-HKCU,%FontReplacements% ,"ＭＳ Ｐゴシック"      ,          ,"%GothicPropName%"
-HKCU,%FontReplacements% ,"メイリオ"             ,          ,"%GothicPropName%"
+HKLM,%FontSystemLink%   ,"Lucida Sans Unicode"          ,0x00010000,"LucidaGrande.ttc,Lucida Grande","%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Meiryo"                       ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Meiryo Bold"                  ,0x00010000,"%GothicPorpFile%"
+HKLM,%FontSystemLink%   ,"Meiryo UI"                    ,0x00010000,"%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Meiryo UI Bold"               ,0x00010000,"%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Microsoft Sans Serif"         ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"MS Gothic"                    ,0x00010000,"%GothicMonoFile%"
+HKLM,%FontSystemLink%   ,"MS Mincho"                    ,0x00010000,"%MinchoMonoFile%"
+HKLM,%FontSystemLink%   ,"MS PGothic"                   ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"MS PMincho"                   ,0x00010000,"%MinchoPropFile%"
+HKLM,%FontSystemLink%   ,"MS UI Gothic"                 ,0x00010000,"%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Segoe Media Center"           ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Segoe Media Center Light"     ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Segoe Media Center Semibold"  ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Segoe UI"                     ,0x00010000,"Tahoma.ttf","%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Tahoma"                       ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"ＭＳ Ｐゴシック"              ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"ＭＳ Ｐ明朝"                  ,0x00010000,"%MinchoPropFile%"
+HKLM,%FontSystemLink%   ,"ＭＳ ゴシック"                ,0x00010000,"%GothicMonoFile%"
+HKLM,%FontSystemLink%   ,"ＭＳ 明朝"                    ,0x00010000,"%MinchoMonoFile%"
+HKLM,%FontSystemLink%   ,"メイリオ"                     ,0x00010000,"%GothicPropFile%"
 HKLM,%FontLink%         ,"FontLinkControl"      ,0x00010001,0x00000000
 HKLM,%FontLink%         ,"FontLinkDefaultChar"  ,0x00010001,0x000030fb
-HKLM,%FontSystemLink%   ,"Lucida Sans Unicode"  ,0x00010000,"%GothicPropFile%","华文宋体.ttf"
-HKLM,%FontSystemLink%   ,"MS PGothic"           ,0x00010000,"%GothicPropFile%","华文宋体.ttf"
-HKLM,%FontSystemLink%   ,"MS UI Gothic"         ,0x00010000,"LucidaGrande.ttc,Lucida Grande","华文宋体.ttf"
-HKLM,%FontSystemLink%   ,"Meiryo UI"            ,0x00010000,"%GothicPropFile%","华文宋体.ttf"
-HKLM,%FontSystemLink%   ,"Meiryo"               ,0x00010000,"%GothicPropFile%","华文宋体.ttf"
-HKLM,%FontSystemLink%   ,"Microsoft Sans Serif" ,0x00010000,"%GothicPropFile%","华文宋体.ttf"
-HKLM,%FontSystemLink%   ,"Tahoma"               ,0x00010000,"%GothicPropFile%","华文宋体.ttf"
 HKLM,%FontMapper%       ,"ARIAL"                ,0x00010001,0x00000000
 HKLM,%FontMapper%       ,"COURIER NEW"          ,0x00010001,0x00008000
 HKLM,%FontMapper%       ,"COURIER"              ,0x00010001,0x00008800
@@ -171,11 +172,12 @@ HKLM,%CurrentVersionNT%\Time Zones\Korea Standard Time  ,                   ,0x0
 
 [Wine Settings]
 
-HKCU,Software\Wine\Direct3D  ,"DirectDrawRenderer"        ,0x00000002,"opengl"
-HKCU,%DllOverrides%          ,                            ,0x00000010
-HKCU,%Drivers%               ,"Audio"                     ,0x00000002,"coreaudio"
-HKCU,%Drivers%               ,"Graphics"                  ,0x00000002,"mac"
-HKCU,Software\Wine\Mac Driver,"WindowsFloatWhenInactive"  ,0x00000002,"nonfullscreen"
+HKCU,Software\Wine\Direct3D           ,"DirectDrawRenderer"       ,0x00000002,"opengl"
+HKCU,Software\Wine\DllOverrides       ,                           ,0x00000010
+HKCU,Software\Wine\Drivers            ,"Audio"                    ,0x00000002,"coreaudio"
+HKCU,Software\Wine\Drivers            ,"Graphics"                 ,0x00000002,"mac"
+HKCU,Software\Wine\Fonts\Replacements ,                           ,0x00000010
+HKCU,Software\Wine\Mac Driver         ,"WindowsFloatWhenInactive" ,0x00000002,"nonfullscreen"
 
 
 
@@ -183,7 +185,21 @@ HKCU,Software\Wine\Mac Driver,"WindowsFloatWhenInactive"  ,0x00000002,"nonfullsc
 
 ;;; STEAM ;;;
 
-HKCU,%AppDefaults%\Steam.exe\DllOverrides,"dwrite",0x00000002,""
+HKCU,Software\Wine\AppDefaults\Steam.exe\DllOverrides,"dwrite",0x00000002,""
+
+
+
+[Experimental]
+
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"midimapper"    ,,"midimap.dll"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"msacm.imaadpcm",,"imaadp32.acm"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"msacm.msadpcm" ,,"msadp32.acm"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"msacm.msg722"  ,,"msg711.acm"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"msacm.msgsm610",,"msgsm32.acm"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"vidc.cvid"     ,,"iccvid.dll"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"vidc.mrle"     ,,"msrle32.dll"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"vidc.msvc"     ,,"msvidc32.dll"
+HKLM,Software\Microsoft\Windows NT\CurrentVersion\Drivers32,"wavemapper"    ,,"msacm32.drv"
 
 
 
