@@ -3,14 +3,14 @@
 ;; Copyright (C) 2013-2014 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2014年08月26日
+;;   2014年09月04日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
 ;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
 ;;
 ;; 動作環境:
-;;    Mac OS X 10.9.4 / Wine 1.7.23
+;;    Mac OS X 10.9.4 / Wine 1.7.25
 ;;
 ;; 登録方法:
 ;;   wine rundll32 setupapi,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
@@ -102,7 +102,7 @@ HKCU,%Favorites%,"タイムゾーン (Tokyo)"       ,,"HKEY_LOCAL_MACHINE\%Curre
 
 HKLM,%FontSystemLink%   ,"Lucida Sans Unicode"          ,0x00010000,"LucidaGrande.ttc,Lucida Grande","%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Meiryo"                       ,0x00010000,"%GothicPropFile%"
-HKLM,%FontSystemLink%   ,"Meiryo Bold"                  ,0x00010000,"%GothicPorpFile%"
+HKLM,%FontSystemLink%   ,"Meiryo Bold"                  ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Meiryo UI"                    ,0x00010000,"%GothicUIFile%"
 HKLM,%FontSystemLink%   ,"Meiryo UI Bold"               ,0x00010000,"%GothicUIFile%"
 HKLM,%FontSystemLink%   ,"Microsoft Sans Serif"         ,0x00010000,"%GothicPropFile%"
