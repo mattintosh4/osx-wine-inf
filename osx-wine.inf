@@ -100,6 +100,7 @@ HKCU,%Favorites%,"タイムゾーン (Tokyo)"       ,,"HKEY_LOCAL_MACHINE\%Curre
 
 [Fonts]
 
+HKCU,%FontReplacements% ,"MS UI Gothic"                 ,          ,"%GothicUIName%"
 HKLM,%FontSystemLink%   ,"Lucida Sans Unicode"          ,0x00010000,"LucidaGrande.ttc,Lucida Grande","%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Meiryo"                       ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Meiryo Bold"                  ,0x00010000,"%GothicPropFile%"
