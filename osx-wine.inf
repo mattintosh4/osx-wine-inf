@@ -1,16 +1,16 @@
 ﻿;; Mac OS X 日本語環境用 Wine 初期設定ファイル
 ;;
-;; Copyright (C) 2013-2014 mattintosh4, https://github.com/mattintosh4
+;; Copyright (C) 2013-2019 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2014年09月04日
+;;   2019年05月15日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
 ;;   いかなる損害において当方は一切責任を負いません。ご使用は自己責任でお願いします。
 ;;
 ;; 動作環境:
-;;    Mac OS X 10.9.4 / Wine 1.7.25
+;;    Mac OS X 10.12.3 / Wine 4.0
 ;;
 ;; 登録方法:
 ;;   wine rundll32 setupapi,InstallHinfSection DefaultInstall 128 /path/to/osx-wine.inf
@@ -61,16 +61,16 @@ FontSystemLink    = Software\Microsoft\Windows NT\CurrentVersion\FontLink\System
 
 ;;; FONT ;;;
 
-GothicMonoFile    = ヒラギノ角ゴ Pro W3.otf
-GothicMonoName    = ヒラギノ角ゴ Pro W3
-GothicPropFile    = ヒラギノ角ゴ Pro W3.otf
-GothicPropName    = ヒラギノ角ゴ Pro W3
-GothicUIFile      = ヒラギノ丸ゴ Pro W4.otf
-GothicUIName      = ヒラギノ丸ゴ Pro W4
-MinchoMonoFile    = ヒラギノ明朝 Pro W3.otf
-MinchoMonoName    = ヒラギノ明朝 Pro W3
-MinchoPropFile    = ヒラギノ明朝 Pro W3.otf
-MinchoPropName    = ヒラギノ明朝 Pro W3
+GothicMonoFile    = VL-Gothic.ttf
+GothicMonoName    = VL ゴシック
+GothicPropFile    = VL-PGothic.ttf
+GothicPropName    = VL Pゴシック
+GothicUIFile      = VL-PGothic.ttf
+GothicUIName      = VL Pゴシック
+MinchoMonoFile    = VL-Gothic.ttf
+MinchoMonoName    = VL ゴシック
+MinchoPropFile    = VL-PGothic.ttf
+MinchoPropName    = VL Pゴシック
 
 
 
@@ -78,6 +78,10 @@ MinchoPropName    = ヒラギノ明朝 Pro W3
 
 HKCU,Control Panel\Mouse,"DoubleClickHeight",,"8"
 HKCU,Control Panel\Mouse,"DoubleClickWidth" ,,"8"
+HKCU,Control Panel\Desktop,"FontSmoothing",,"2"
+HKCU,Control Panel\Desktop,"FontSmoothingGamma"      ,0x00010001,0x00000000
+HKCU,Control Panel\Desktop,"FontSmoothingOrientation",0x00010001,0x00000001
+HKCU,Control Panel\Desktop,"FontSmoothingType"       ,0x00010001,0x00000002
 
 
 
@@ -178,6 +182,7 @@ HKCU,Software\Wine\DllOverrides       ,                           ,0x00000010
 HKCU,Software\Wine\Drivers            ,"Audio"                    ,0x00000002,"coreaudio"
 HKCU,Software\Wine\Drivers            ,"Graphics"                 ,0x00000002,"mac"
 HKCU,Software\Wine\Fonts\Replacements ,                           ,0x00000010
+HKCU,Software\Wine\Mac Driver         ,"RetinaMode"               ,0x00000002,"n"
 HKCU,Software\Wine\Mac Driver         ,"WindowsFloatWhenInactive" ,0x00000002,"nonfullscreen"
 
 
