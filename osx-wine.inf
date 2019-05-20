@@ -190,8 +190,13 @@ HKCU,Software\Wine\Mac Driver         ,"WindowsFloatWhenInactive" ,0x00000002,"n
 [App Defaults]
 
 ;;; STEAM ;;;
-
 HKCU,Software\Wine\AppDefaults\Steam.exe\DllOverrides,"dwrite",0x00000002,""
+
+;;; 東方心綺楼 ;;;
+HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"dsound",0x00000002,"builtin"
+
+;;; 東方深秘録 ;;;
+HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"dsound",0x00000002,"builtin"
 
 
 
