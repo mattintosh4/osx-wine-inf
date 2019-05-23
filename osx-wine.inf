@@ -104,30 +104,41 @@ HKCU,%Favorites%,"タイムゾーン (Tokyo)"       ,,"HKEY_LOCAL_MACHINE\%Curre
 
 [Fonts]
 
-HKCU,%FontReplacements% ,"MS UI Gothic"                 ,          ,"%GothicUIName%"
+HKCU,%FontReplacements% ,"MS UI Gothic",,"%GothicUIName%"
+
 HKLM,%FontSystemLink%   ,"Lucida Sans Unicode"          ,0x00010000,"LucidaGrande.ttc,Lucida Grande","%GothicPropFile%"
-HKLM,%FontSystemLink%   ,"Meiryo"                       ,0x00010000,"%GothicPropFile%"
-HKLM,%FontSystemLink%   ,"Meiryo Bold"                  ,0x00010000,"%GothicPropFile%"
-HKLM,%FontSystemLink%   ,"Meiryo UI"                    ,0x00010000,"%GothicUIFile%"
-HKLM,%FontSystemLink%   ,"Meiryo UI Bold"               ,0x00010000,"%GothicUIFile%"
-HKLM,%FontSystemLink%   ,"Microsoft Sans Serif"         ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"MS Gothic"                    ,0x00010000,"%GothicMonoFile%"
 HKLM,%FontSystemLink%   ,"MS Mincho"                    ,0x00010000,"%MinchoMonoFile%"
+HKLM,%FontSystemLink%   ,"MS PGothic MC"                ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"MS PGothic"                   ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"MS PMincho"                   ,0x00010000,"%MinchoPropFile%"
 HKLM,%FontSystemLink%   ,"MS UI Gothic"                 ,0x00010000,"%GothicUIFile%"
-HKLM,%FontSystemLink%   ,"Segoe Media Center"           ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Meiryo Bold"                  ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Meiryo UI Bold"               ,0x00010000,"%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Meiryo UI"                    ,0x00010000,"%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Meiryo"                       ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Microsoft Sans Serif"         ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Modern"                       ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Segoe Media Center Light"     ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Segoe Media Center Semibold"  ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"Segoe Media Center"           ,0x00010000,"Tahoma.ttf","%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Segoe UI"                     ,0x00010000,"Tahoma.ttf","%GothicUIFile%"
+HKLM,%FontSystemLink%   ,"Tahoma Armenian"              ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"Tahoma"                       ,0x00010000,"%GothicPropFile%"
-HKLM,%FontSystemLink%   ,"ＭＳ Ｐゴシック"              ,0x00010000,"%GothicPropFile%"
-HKLM,%FontSystemLink%   ,"ＭＳ Ｐ明朝"                  ,0x00010000,"%MinchoPropFile%"
+HKLM,%FontSystemLink%   ,"ゴシック"                     ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"メイリオ Bold"                ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"メイリオ"                     ,0x00010000,"%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"ＭＳ ゴシック"                ,0x00010000,"%GothicMonoFile%"
 HKLM,%FontSystemLink%   ,"ＭＳ 明朝"                    ,0x00010000,"%MinchoMonoFile%"
-HKLM,%FontSystemLink%   ,"メイリオ"                     ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"ＭＳ Ｐゴシック"              ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"ＭＳ Ｐ明朝"                  ,0x00010000,"%MinchoPropFile%"
+HKLM,%FontSystemLink%   ,"ｸｰﾘｴ"                         ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"ｺﾞｼｯｸ"                        ,0x00010000,"%GothicPropFile%"
+HKLM,%FontSystemLink%   ,"ﾍﾙﾍﾞﾁｶ"                       ,0x00010000,"%GothicPropFile%"
+
 HKLM,%FontLink%         ,"FontLinkControl"      ,0x00010001,0x00000000
 HKLM,%FontLink%         ,"FontLinkDefaultChar"  ,0x00010001,0x000030fb
+
 HKLM,%FontMapper%       ,"ARIAL"                ,0x00010001,0x00000000
 HKLM,%FontMapper%       ,"COURIER NEW"          ,0x00010001,0x00008000
 HKLM,%FontMapper%       ,"COURIER"              ,0x00010001,0x00008800
@@ -192,11 +203,19 @@ HKCU,Software\Wine\Mac Driver         ,"WindowsFloatWhenInactive" ,0x00000002,"n
 ;;; STEAM ;;;
 HKCU,Software\Wine\AppDefaults\Steam.exe\DllOverrides,"dwrite",0x00000002,""
 
+;;; 東方紅魔郷 ;;;
+
+;;; 東方天空璋 ;;;
+HKCU,Software\Wine\AppDefaults\th16.exe\DllOverrides,"d3d9_43"          ,0x00000002,"native,builtin"
+
 ;;; 東方心綺楼 ;;;
-HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"dsound",0x00000002,"builtin"
+HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"d3dcompiler_43"  ,0x00000002,"native,builtin"
+HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"d3dx9_43"        ,0x00000002,"native,builtin"
+HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"dsound"          ,0x00000002,"builtin"
+HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"xinput1_3"       ,0x00000002,"native,builtin"
 
 ;;; 東方深秘録 ;;;
-HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"dsound",0x00000002,"builtin"
+HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"dsound"          ,0x00000002,"builtin"
 
 
 
