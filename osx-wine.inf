@@ -3,7 +3,7 @@
 ;; Copyright (C) 2013-2019 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2019年05月15日
+;;   2019年05月26日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
@@ -104,7 +104,9 @@ HKCU,%Favorites%,"タイムゾーン (Tokyo)"       ,,"HKEY_LOCAL_MACHINE\%Curre
 
 [Fonts]
 
-HKCU,%FontReplacements% ,"MS UI Gothic",,"%GothicUIName%"
+HKCU,%FontReplacements% ,"MS UI Gothic"   ,,"%GothicUIName%"
+HKCU,%FontReplacements% ,"ＭＳ ゴシック"  ,,"%GothicMonoName%"
+HKCU,%FontReplacements% ,"ＭＳ Ｐゴシック",,"%GothicPropName%"
 
 HKLM,%FontSystemLink%   ,"Lucida Sans Unicode"          ,0x00010000,"LucidaGrande.ttc,Lucida Grande","%GothicPropFile%"
 HKLM,%FontSystemLink%   ,"MS Gothic"                    ,0x00010000,"%GothicMonoFile%"
