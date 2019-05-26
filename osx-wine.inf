@@ -208,7 +208,7 @@ HKCU,Software\Wine\AppDefaults\Steam.exe\DllOverrides,"dwrite",0x00000002,""
 ;;; 東方紅魔郷 ;;;
 
 ;;; 東方天空璋 ;;;
-HKCU,Software\Wine\AppDefaults\th16.exe\DllOverrides,"d3d9_43"          ,0x00000002,"native,builtin"
+HKCU,Software\Wine\AppDefaults\th16.exe\DllOverrides ,"d3dx9_43"        ,0x00000002,"native,builtin"
 
 ;;; 東方心綺楼 ;;;
 HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"d3dcompiler_43"  ,0x00000002,"native,builtin"
