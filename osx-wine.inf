@@ -68,10 +68,14 @@ GothicPropFile    = VL-PGothic.ttf
 GothicPropName    = VL Pゴシック
 GothicUIFile      = VL-PGothic.ttf
 GothicUIName      = VL Pゴシック
-MinchoMonoFile    = VL-Gothic.ttf
-MinchoMonoName    = VL ゴシック
-MinchoPropFile    = VL-PGothic.ttf
-MinchoPropName    = VL Pゴシック
+;MinchoMonoFile    = VL-Gothic.ttf
+;MinchoMonoName    = VL ゴシック
+;MinchoPropFile    = VL-PGothic.ttf
+;MinchoPropName    = VL Pゴシック
+MinchoMonoFile    = ヒラギノ明朝 ProN W3.ttc
+MinchoMonoName    = ヒラギノ明朝 ProN W3
+MinchoPropFile    = ヒラギノ明朝 ProN W3.ttc
+MinchoPropName    = ヒラギノ明朝 ProN W3
 
 
 
