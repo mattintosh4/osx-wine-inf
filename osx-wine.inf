@@ -210,6 +210,9 @@ HKCU,Software\Wine\AppDefaults\Steam.exe\DllOverrides,"dwrite",0x00000002,""
 ;;; 東方天空璋 ;;;
 HKCU,Software\Wine\AppDefaults\th16.exe\DllOverrides ,"d3dx9_43"        ,0x00000002,"native,builtin"
 
+;;; 東方鬼形獣 ;;;
+HKCU,Software\Wine\AppDefaults\th17.exe\DllOverrides ,"d3dx9_43"        ,0x00000002,"native,builtin"
+
 ;;; 東方心綺楼 ;;;
 HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"d3dcompiler_43"  ,0x00000002,"native,builtin"
 HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"d3dx9_43"        ,0x00000002,"native,builtin"
@@ -217,7 +220,10 @@ HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"dsound"          ,0x00000
 HKCU,Software\Wine\AppDefaults\th135.exe\DllOverrides,"xinput1_3"       ,0x00000002,"native,builtin"
 
 ;;; 東方深秘録 ;;;
+HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"d3dcompiler_43"  ,0x00000002,"native,builtin"
+HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"d3dx9_43"        ,0x00000002,"native,builtin"
 HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"dsound"          ,0x00000002,"builtin"
+HKCU,Software\Wine\AppDefaults\th145.exe\DllOverrides,"xinput9_1_0"     ,0x00000002,"native,builtin"
 
 
 
