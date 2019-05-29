@@ -3,7 +3,7 @@
 ;; Copyright (C) 2013-2019 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2019年05月26日
+;;   2019年05月30日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
@@ -84,7 +84,7 @@ MinchoPropName    = ヒラギノ明朝 ProN W3
 HKCU,Control Panel\Mouse  ,"DoubleClickHeight"       ,          ,"8"
 HKCU,Control Panel\Mouse  ,"DoubleClickWidth"        ,          ,"8"
 HKCU,Control Panel\Desktop,"FontSmoothing"           ,          ,"2"
-HKCU,Control Panel\Desktop,"FontSmoothingGamma"      ,0x00010001,0x00000000
+HKCU,Control Panel\Desktop,"FontSmoothingGamma"      ,0x00010001,0x00000444
 HKCU,Control Panel\Desktop,"FontSmoothingOrientation",0x00010001,0x00000001
 HKCU,Control Panel\Desktop,"FontSmoothingType"       ,0x00010001,0x00000002
 
