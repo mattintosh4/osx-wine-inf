@@ -3,7 +3,7 @@
 ;; Copyright (C) 2013-2019 mattintosh4, https://github.com/mattintosh4
 ;;
 ;; 最終更新:
-;;   2019年05月30日
+;;   2019年06月12日
 ;;
 ;; 概要:
 ;;   日本語環境用フォント設定、タイムゾーン修正等を行います。
@@ -62,15 +62,15 @@ FontSubstitutes   = Software\Microsoft\Windows NT\CurrentVersion\FontSubstitutes
 
 ;;; FONT ;;;
 
-GothicMonoFile    = VL-Gothic.ttf
+GothicMonoFile    = VL-Gothic-Regular.ttf
 GothicMonoName    = VL ゴシック
-GothicPropFile    = VL-PGothic.ttf
+GothicPropFile    = VL-PGothic-Regular.ttf
 GothicPropName    = VL Pゴシック
-GothicUIFile      = VL-PGothic.ttf
+GothicUIFile      = VL-PGothic-Regular.ttf
 GothicUIName      = VL Pゴシック
-;MinchoMonoFile    = VL-Gothic.ttf
+;MinchoMonoFile    = VL-Gothic-Regular.ttf
 ;MinchoMonoName    = VL ゴシック
-;MinchoPropFile    = VL-PGothic.ttf
+;MinchoPropFile    = VL-PGothic-Regular.ttf
 ;MinchoPropName    = VL Pゴシック
 MinchoMonoFile    = ヒラギノ明朝 ProN W3.ttc
 MinchoMonoName    = ヒラギノ明朝 ProN W3
