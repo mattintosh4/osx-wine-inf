@@ -84,7 +84,7 @@ MinchoPropName    = ヒラギノ明朝 ProN W3
 HKCU,Control Panel\Mouse  ,"DoubleClickHeight"       ,          ,"8"
 HKCU,Control Panel\Mouse  ,"DoubleClickWidth"        ,          ,"8"
 HKCU,Control Panel\Desktop,"FontSmoothing"           ,          ,"2"
-HKCU,Control Panel\Desktop,"FontSmoothingGamma"      ,0x00010001,0x00000444
+HKCU,Control Panel\Desktop,"FontSmoothingGamma"      ,0x00010001,0x000004b0
 HKCU,Control Panel\Desktop,"FontSmoothingOrientation",0x00010001,0x00000001
 HKCU,Control Panel\Desktop,"FontSmoothingType"       ,0x00010001,0x00000002
 
